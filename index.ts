@@ -1,6 +1,6 @@
 import inquirer from "inquirer"
 
-let myBalnce = 150000;
+let myBalnce = 15000;
 let myPinCode = 223344;
 
 const codeInput = await inquirer.prompt(
@@ -25,8 +25,9 @@ const codeInput = await inquirer.prompt(
                 const amount = await inquirer.prompt(
                     {
                         name: "userAmount",
-                        type: "number",
-                        message: "Enter your amount ",
+                        type: "list",
+                        message: "Please select your amount ",
+                        choices: ["1000","2000","5000","10000"]
             
                     })
 
